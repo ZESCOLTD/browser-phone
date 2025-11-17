@@ -1,5 +1,8 @@
 <?php
 
+use App\Livewire\Chat\Drawer;
+use App\Livewire\Chat\Group;
+use App\Livewire\Chat\PrivateConv;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +31,12 @@ Route::get('/chat/private', function () {
 Route::get('/chat/group', function () {
     return view('chat.group');
 });
+
+Route::get('/livewire/chat/drawer', Drawer::class)->name('livewire.chat.drawer');
+
+Route::get('/livewire/chat/private', PrivateConv::class)->name('livewire.chat.private');
+
+
+Route::get('/livewire/chat/group', Group::class)->name('livewire.chat.group');
+
 
